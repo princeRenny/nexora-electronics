@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexora — iPhones, Phones & Gadgets</title>
+  <meta name="description" content="Nexora sells genuine iPhones, everyday phones, and electronics gadgets in Nairobi. Local warranty, IMEI check, M-Pesa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announce">Sealed stock · IMEI checked at the counter · Nairobi delivery · M-Pesa till 884210</div>
+  <header class="nav">
+    <a class="logo" href="#top">Nex<span>ora</span></a>
+    <nav class="links">
+      <a href="#iphones">iPhones</a>
+      <a href="#phones">Phones</a>
+      <a href="#gadgets">Gadgets</a>
+      <a href="#details">Shop details</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="editToggle" title="Fix listings">Edit</button>
+      <button class="cart-btn" id="cartToggle">Bag <em id="cartCount">0</em></button>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Westlands, Nairobi</p>
+        <h1>iPhones, everyday phones, and the gadgets that go with them.</h1>
+        <p class="lede">Genuine devices with a local invoice. Try them on the counter, pay by M-Pesa or card, and take a 12-month warranty with you. Phone prices are 5% under Saruk Digital.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#iphones">Shop iPhones</a>
+          <a class="btn ghost" href="#phones">Everyday phones</a>
+          <a class="btn ghost" href="#gadgets">Gadgets</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1200&q=80" alt="iPhone" />
+        <div class="hero-note"><span>Counter pick-up today</span><strong>iPhone 18 Pro Max from KES 213,749</strong></div>
+      </div>
+    </section>
+    <section class="trust">
+      <article><strong>IMEI on the receipt</strong><span>Checked before the box is sealed again.</span></article>
+      <article><strong>Not grey market</strong><span>Invoice in the shop name, serial logged.</span></article>
+      <article><strong>Setup included</strong><span>Data transfer, eSIM, screen film.</span></article>
+      <article><strong>Pay how you like</strong><span>M-Pesa, card, or bank transfer.</span></article>
+    </section>
+    <div id="catalog"></div>
+    <section class="details" id="details">
+      <div>
+        <p class="eyebrow">Shop details</p>
+        <h2>What you are actually buying</h2>
+        <dl>
+          <div><dt>Store</dt><dd>Nexora Electronics, Ground floor, The Cube, Waiyaki Way, Westlands</dd></div>
+          <div><dt>Hours</dt><dd>Monday–Saturday 9:00–19:00 · Sunday 10:00–16:00</dd></div>
+          <div><dt>Phone / WhatsApp</dt><dd>+254 700 441 208</dd></div>
+          <div><dt>Payments</dt><dd>M-Pesa till 884210 · Visa / Mastercard · bank transfer</dd></div>
+          <div><dt>Delivery</dt><dd>Same day in Westlands, Kilimani, CBD, and Parklands before 2pm.</dd></div>
+          <div><dt>Warranty</dt><dd>12 months on phones. Accessories 90 days.</dd></div>
+        </dl>
+      </div>
+      <form id="holdForm">
+        <h3>Reserve an item</h3>
+        <p>Held at the counter for 24 hours.</p>
+        <label>Name<input name="name" required placeholder="Your name" /></label>
+        <label>Phone<input name="phone" required placeholder="07xx xxx xxx" /></label>
+        <label>Item<input name="item" required placeholder="iPhone 18 Pro Max 256GB" /></label>
+        <button class="btn primary" type="submit">Request a hold</button>
+        <p class="form-note" id="formNote" hidden>Request sent. We will text you within the hour.</p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="logo">Nex<span>ora</span></div>
+    <p>iPhones, everyday phones, and electronics gadgets. Westlands, Nairobi.</p>
+    <small>Prices are 5% under Saruk Digital shelf prices as of 4 Oct 2026. VAT exclusive at source.</small>
+  </footer>
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-head"><h3>Your bag</h3><button id="closeDrawer" aria-label="Close">×</button></div>
+    <div id="drawerBody" class="drawer-body"></div>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">KES 0</strong></div>
+      <button class="btn primary full" id="checkoutBtn">Pay with M-Pesa</button>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+  <dialog id="productDialog">
+    <button class="close-x" id="closeDialog" aria-label="Close">×</button>
+    <div id="dialogBody"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
